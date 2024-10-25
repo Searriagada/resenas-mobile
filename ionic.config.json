@@ -1,0 +1,7 @@
+{
+  "name": "resumenYResenasAndroid",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
