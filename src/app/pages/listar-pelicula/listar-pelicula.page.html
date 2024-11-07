@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>listar-pelicula</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">listar-pelicula</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-card-content>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item *ngFor="let pelicula of peliculas; let i=index">
+              <ion-thumbnail slot="start">
+                <img alt="Silhouette of mountains" src="{{pelicula.imagenUrl}}" />
+              </ion-thumbnail>
+              <ion-label>{{pelicula.titulo}}</ion-label>
+              <ion-label>{{pelicula.director}}</ion-label>
+              <ion-label>{{pelicula.sinopsis}}</ion-label>
+              <ion-button (click)="eliminarCoctel(i)" color="danger" fill="outline">Eliminar</ion-button>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
