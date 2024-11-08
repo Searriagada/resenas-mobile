@@ -19,7 +19,7 @@ export class AgregarUsuarioPage implements OnInit {
   }
 
   cambiarPagina(){
-    this.router.navigate(['/listar-pelicula'])
+    this.router.navigate(['/home'])
   }
 
 }

@@ -19,7 +19,7 @@ export class AgregarPeliculaPage implements OnInit {
   ngOnInit() {
   }
   cambiarPagina(){
-    this.router.navigate(['/listar-pelicula'])
+    this.router.navigate(['/home'])
   }
 
 }
