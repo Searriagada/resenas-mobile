@@ -12,9 +12,24 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home" (click)="nuevoUsuario()">
+        <ion-icon name="person-add-outline"></ion-icon>
+        Nuevo Usuario
+      </ion-tab-button>
+      <ion-tab-button tab="videocam" (click)="nuevaPelicula()">
+        <ion-icon name="videocam"></ion-icon>
+        Nueva pelicula
+      </ion-tab-button>
+      <ion-tab-button tab="create-outline" (click)="editarPelicula()">
+        <ion-icon name="create-outline"></ion-icon>
+        Edita Pelicula
+      </ion-tab-button>
+      <ion-tab-button tab="list-outline" (click)="listarPelicula()">
+        <ion-icon name="list-outline"></ion-icon>
+        Listado
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>
