@@ -32,7 +32,7 @@ export class ListarPeliculaPage implements OnInit {
       genero: 'Aventura',
       sinopsis: 'Un grupo de prisioneros de guerra planea una fuga audaz de un campo de concentración durante la Segunda Guerra Mundial.',
       duracion: 172,
-      imagenUrl: "https://upload.wikimedia.org/wikipedia/en/7/70/The_Great_Escape_poster.jpg"
+      imagenUrl: "https://m.media-amazon.com/images/S/pv-target-images/88a06ea53ddbc0396ef0fe85aed1422b0942e6c3470b29df13eceb2bb45dc94b.jpg"
     },
     {
       titulo: 'La Vida es Bella',
@@ -59,7 +59,7 @@ export class ListarPeliculaPage implements OnInit {
       genero: 'Ciencia Ficción',
       sinopsis: 'Un ladrón que roba secretos a través de los sueños debe realizar una compleja misión de inserción de ideas.',
       duracion: 148,
-      imagenUrl: "https://upload.wikimedia.org/wikipedia/en/7/7f/Inception_ver3.jpg"
+      imagenUrl: "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg"
     }
   ]
 
