@@ -1,15 +1,34 @@
 <ion-content [fullscreen]="true">
+  <!-- Contenido principal de la página -->
+  
   <ion-card>
+    <!-- Tarjeta que contiene la lista de películas -->
+    
     <ion-card-content>
+      <!-- Contenido dentro de la tarjeta -->
+      
       <ion-list>
+        <!-- Lista de películas -->
+        
         <ion-item *ngFor="let pelicula of peliculas; let i=index">
+          <!-- Itera sobre cada película en el array 'peliculas' -->
+          
           <ion-thumbnail slot="start">
-            <img alt="Silhouette of mountains" src="{{pelicula.imagenUrl}}" />
+            <!-- Imagen de la película -->
+            <img alt="Imagen de la película" src="{{pelicula.imagenUrl}}" />
           </ion-thumbnail>
+          
           <ion-label>{{pelicula.titulo}}</ion-label>
+          <!-- Muestra el título de la película -->
+          
           <ion-label>{{pelicula.director}}</ion-label>
+          <!-- Muestra el director de la película -->
+          
           <ion-label>{{pelicula.sinopsis}}</ion-label>
+          <!-- Muestra la sinopsis de la película -->
+          
           <ion-button (click)="eliminarCoctel(i)" color="danger" fill="outline">Eliminar</ion-button>
+          <!-- Botón para eliminar la película de la lista -->
         </ion-item>
       </ion-list>
     </ion-card-content>

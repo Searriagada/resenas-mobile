@@ -1,19 +1,32 @@
 <ion-header [translucent]="true">
+  <!-- Header transparente -->
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <!-- Contenido principal -->
+  
   <ion-header collapse="condense">
-    </ion-header>
+    <!-- Header que se oculta al hacer scroll -->
+  </ion-header>
+  
   <br>
-  <ion-input label="Nombre Usuario" label-placement="floating" fill="outline" placeholder="inegresa tu usuario"></ion-input>
+  
+  <!-- Campo para ingresar el nombre de usuario -->
+  <ion-input label="Nombre Usuario" label-placement="floating" fill="outline" placeholder="Ingresa tu usuario"></ion-input>
+  
   <br>
-  <ion-input type ="email" label="Correo" label-placement="floating" fill="outline" placeholder="ingresa el texto"></ion-input>
-  <br>
+  
+  <!-- Campo para seleccionar la fecha de nacimiento -->
   <ion-input type="date" label="Fecha de Nacimiento" label-placement="floating" fill="outline" placeholder="Selecciona una fecha"></ion-input>
+  
   <br>
+  
+  <!-- Campo para crear una contraseña -->
   <ion-input type="text" label="Contraseña" label-placement="floating" fill="outline" placeholder="Crea una contraseña"></ion-input>
   
   <br>
-  <ion-button (click)="cambiarPagina()" shape="round" expand="full" fill="outline" >Agregar</ion-button>
+  
+  <!-- Botón para agregar los datos -->
+  <ion-button (click)="cambiarPagina()" shape="round" expand="full" fill="outline">Agregar</ion-button>
 
 </ion-content>
