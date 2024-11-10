@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonList, IonItem, IonLabel, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonThumbnail, IonButton } from '@ionic/angular/standalone';
 
+// Define la estructura de una película con sus atributos
 export interface Pelicula {
   titulo: String,
   añolanzamiento: Date,
@@ -11,17 +12,18 @@ export interface Pelicula {
   sinopsis: String,
   duracion: number,
   imagenUrl: String
-
 }
+
 @Component({
-  selector: 'app-listar-pelicula',
-  templateUrl: './listar-pelicula.page.html',
-  styleUrls: ['./listar-pelicula.page.scss'],
-  standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonThumbnail, IonButton]
+  selector: 'app-listar-pelicula',  // Define el selector del componente
+  templateUrl: './listar-pelicula.page.html',  // Vincula la plantilla HTML
+  styleUrls: ['./listar-pelicula.page.scss'],  // Vincula el archivo de estilo CSS
+  standalone: true,  // El componente es independiente
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonThumbnail, IonButton]  // Importa los módulos necesarios de Ionic y Angular
 })
 export class ListarPeliculaPage implements OnInit {
 
+  // Lista de películas con su respectiva información
   peliculas: Pelicula[] = [
     {
       titulo: 'El Gran Escape',
@@ -58,15 +60,18 @@ export class ListarPeliculaPage implements OnInit {
       sinopsis: 'Un ladrón que roba secretos a través de los sueños debe realizar una compleja misión de inserción de ideas.',
       duracion: 148,
       imagenUrl: "https://upload.wikimedia.org/wikipedia/en/7/7f/Inception_ver3.jpg"
-    } ]
+    }
+  ]
+
   constructor() { }
 
+  // Se ejecuta cuando el componente es inicializado
   ngOnInit() {
   }
 
+  // Método para eliminar una película de la lista
   eliminarCoctel(index: number) {
-
-    this.peliculas.splice(index, 1)
+    this.peliculas.splice(index, 1);  // Elimina la película en la posición 'index'
   }
 
 }

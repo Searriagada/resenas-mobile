@@ -2,24 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonInput, IonButton, IonSelect, IonSelectOption, IonToolbar } from '@ionic/angular/standalone';
-import{Router} from '@angular/router'
-@Component({
-  selector: 'app-agregar-usuario',
-  templateUrl: './agregar-usuario.page.html',
-  styleUrls: ['./agregar-usuario.page.scss'],
-  standalone: true,
-  imports: [IonContent, IonHeader, IonTitle , IonInput, IonButton, IonSelect, IonSelectOption, IonToolbar, CommonModule, FormsModule]
+import { Router } from '@angular/router'; // Importa el servicio Router para manejar la navegación entre páginas
 
+@Component({
+  selector: 'app-agregar-usuario',  // Define el selector del componente
+  templateUrl: './agregar-usuario.page.html',  // Vincula el archivo de plantilla HTML
+  styleUrls: ['./agregar-usuario.page.scss'],  // Vincula el archivo de estilo CSS
+  standalone: true,  // El componente se maneja de forma independiente
+  imports: [IonContent, IonHeader, IonTitle, IonInput, IonButton, IonSelect, IonSelectOption, IonToolbar, CommonModule, FormsModule]  // Importa los módulos necesarios de Ionic y Angular
 })
 export class AgregarUsuarioPage implements OnInit {
 
-  constructor(private router:Router) { }
+  // Constructor que inyecta el servicio Router para realizar la navegación
+  constructor(private router: Router) { }
 
+  // Método que se ejecuta cuando el componente se inicializa
   ngOnInit() {
   }
 
-  cambiarPagina(){
-    this.router.navigate(['/home'])
+  // Método para navegar a la página 'home' cuando se llama
+  cambiarPagina() {
+    this.router.navigate(['/home']);  // Redirige a la página de inicio
   }
-
 }
