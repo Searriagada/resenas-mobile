@@ -1,0 +1,16 @@
+/* Cambiar el color de los textos en ion-title y centrarlo */
+ion-title {
+    color: white;
+    text-align: center; /* Centra el texto del título */
+}
+
+/* Cambiar el color de los textos dentro de los inputs y centrarlo */
+ion-input {
+    color: white;
+    text-align: center; /* Centra el texto dentro de los inputs */
+}
+
+/* Cambiar el color de los placeholders de los inputs */
+ion-input ::ng-deep .input-placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Blanco con algo de transparencia */
+}

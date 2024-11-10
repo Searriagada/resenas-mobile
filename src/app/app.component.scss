@@ -1,0 +1,57 @@
+/* Contenedor principal para centrar todo */
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+/* Estilo del formulario */
+ion-header {
+  text-align: center;
+}
+
+ion-header .ion-title {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Estilo de los inputs */
+ion-input {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 16px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo ligeramente transparente */
+  border-radius: 8px;
+}
+
+/* Hacer los textos de los inputs blancos */
+ion-input .native-input {
+  color: white;
+}
+
+/* Estilo de los placeholders */
+ion-input ::ng-deep .input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Botón de agregar */
+ion-button {
+  background-color: #4fa3f7;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+ion-button:hover {
+  background-color: #ffab00; /* Efecto hover */
+}
+
+/* Espaciado adicional */
+ion-content br {
+  margin-bottom: 10px;
+}

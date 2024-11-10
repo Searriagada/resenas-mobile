@@ -35,3 +35,28 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+/* src/theme/global.scss */
+
+/* Fondo de la app con la imagen proporcionada */
+body {
+    background: url('https://img.freepik.com/vector-premium/fondo-abstracto-cine-casa-ilustracion_118124-3052.jpg');
+    background-size: cover;
+  }
+
+  /* Contenido de la app */
+  ion-content {
+    --background: rgba(0, 0, 0, 0.1); /* Fondo oscuro semitransparente para el contenido */
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  /* Otros estilos para botones, inputs, etc. */
+  ion-button {
+    --background: #b71c1c;
+    --color: #fff;
+    --border-radius: 20px;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
