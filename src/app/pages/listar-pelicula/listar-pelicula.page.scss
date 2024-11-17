@@ -1,3 +1,31 @@
-.ion-card-content{
+.card-container{
     background-color: transparent;
+    margin-top: 30px;
+    padding-bottom: 10%;
 }
+.imagen {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+  
+  .img-container{
+    text-align: center;
+  }
+  .btn-container{
+    text-align: center;
+  }
+  .header{
+    text-align: center;
+  }
+  .texto {
+    background-color: #333; /* Adjust the color as needed */
+    color: white;
+    border-radius: 20px;
+    margin: 0 auto 20px auto;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }

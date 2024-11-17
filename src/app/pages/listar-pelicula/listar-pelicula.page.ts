@@ -70,7 +70,7 @@ export class ListarPeliculaPage implements OnInit {
   }
 
   // Método para eliminar una película de la lista
-  eliminarCoctel(index: number) {
+  eliminarPelicula(index: number) {
     this.peliculas.splice(index, 1);  // Elimina la película en la posición 'index'
   }
 
