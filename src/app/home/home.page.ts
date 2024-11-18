@@ -19,8 +19,8 @@ export class HomePage {
     this.router.navigate(['/listar-pelicula'])
   }
 
-  nuevoUsuario(){
-    this.router.navigate(['/agregar-usuario'])
+  iniciarSesion(){
+    this.router.navigate(['/iniciar-sesion'])
   }
 
   nuevaPelicula(){

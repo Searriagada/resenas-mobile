@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonInput, IonButton, IonSelect, IonSelectOption, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonInput, IonButton, IonSelect, IonSelectOption, IonToolbar, IonCard, IonCardContent, IonCardTitle, IonItem, IonLabel, IonRow, IonCol, IonCardHeader  } from '@ionic/angular/standalone';
 import { Router } from '@angular/router'; // Importa el servicio Router para manejar la navegación entre páginas
 
 @Component({
@@ -9,7 +9,7 @@ import { Router } from '@angular/router'; // Importa el servicio Router para man
   templateUrl: './agregar-usuario.page.html',  // Vincula el archivo de plantilla HTML
   styleUrls: ['./agregar-usuario.page.scss'],  // Vincula el archivo de estilo CSS
   standalone: true,  // El componente se maneja de forma independiente
-  imports: [IonContent, IonHeader, IonTitle, IonInput, IonButton, IonSelect, IonSelectOption, IonToolbar, CommonModule, FormsModule]  // Importa los módulos necesarios de Ionic y Angular
+  imports: [IonContent, IonHeader, IonTitle, IonInput, IonButton, IonSelect, IonSelectOption, IonToolbar, CommonModule, FormsModule, IonCard, IonCardContent, IonCardTitle, IonItem, IonLabel, IonRow, IonCol, IonCardHeader ]  // Importa los módulos necesarios de Ionic y Angular
 })
 export class AgregarUsuarioPage implements OnInit {
 

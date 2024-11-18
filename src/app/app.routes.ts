@@ -30,4 +30,9 @@ export const routes: Routes = [
     path: 'agregar-usuario',
     loadComponent: () => import('./pages/agregar-usuario/agregar-usuario.page').then( m => m.AgregarUsuarioPage)
   },
+  {
+    path: 'iniciar-sesion',
+    loadComponent: () => import('./pages/iniciar-sesion/iniciar-sesion.page').then( m => m.IniciarSesionPage)
+  },
+
 ];
