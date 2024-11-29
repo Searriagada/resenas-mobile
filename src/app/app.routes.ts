@@ -33,6 +33,9 @@ export const routes: Routes = [
   {
     path: 'iniciar-sesion',
     loadComponent: () => import('./pages/iniciar-sesion/iniciar-sesion.page').then( m => m.IniciarSesionPage)
-  },
+  },  {
+    path: 'random',
+    loadComponent: () => import('./pages/random/random.page').then( m => m.RandomPage)
+  }
 
 ];
