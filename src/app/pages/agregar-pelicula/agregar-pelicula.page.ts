@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonInput, IonButton, IonSelect, IonSelectOption, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonImg } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonInput, IonButton, IonSelect, IonSelectOption, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonImg, IonRow, IonCol, IonText } from '@ionic/angular/standalone';
 import { Router } from '@angular/router'; // Importa el servicio Router para la navegación
 import { TakePhotoService } from '../../service/take-photo.service'; // Importa el servicio de toma de fotos
 
@@ -10,7 +10,7 @@ import { TakePhotoService } from '../../service/take-photo.service'; // Importa 
   templateUrl: './agregar-pelicula.page.html',  // Define la plantilla HTML
   styleUrls: ['./agregar-pelicula.page.scss'],  // Define el archivo de estilo CSS
   standalone: true,  // El componente se maneja de forma independiente
-  imports: [IonContent, IonHeader, IonTitle, IonInput, IonButton, IonSelect, IonSelectOption, IonToolbar, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonImg]  // Importa los módulos necesarios para Ionic y Angular
+  imports: [IonContent, IonHeader, IonTitle, IonInput, IonButton, IonSelect, IonSelectOption, IonToolbar, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonImg, IonRow, IonCol, IonText ]  // Importa los módulos necesarios para Ionic y Angular
 })
 export class AgregarPeliculaPage implements OnInit {
   photo: string | null = null;

@@ -15,6 +15,9 @@
   /* Estilo general de los botones */
   ion-button {
     margin-top: 15px;
+    --background: #d9534f; /* Color rojo para los botones */
+    --color: white;
+    --border-radius: 10px;
   }
 
   
@@ -36,13 +39,6 @@
     font-size: 1.5em;
     font-weight: bold;
   }
-  
-  /* Cambiar los botones para que tengan un color consistente */
-  ion-button {
-    --background: #d9534f; /* Color rojo para los botones */
-    --color: white;
-    --border-radius: 10px;
-  }
 
   ion-card {
     margin: 10px;
@@ -51,11 +47,19 @@
   
   ion-input {
     margin-bottom: 10px;
+    text-align: center; /* Centra el texto dentro de los inputs */
+    background-color: white;
   }
   
   .error-message {
     color: red;
     font-size: 12px;
   }
+
+  .input-container{
+    margin: 20px;
+}
+
+
   
   
