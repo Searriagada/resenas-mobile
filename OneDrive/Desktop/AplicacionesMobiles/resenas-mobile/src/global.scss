@@ -1,0 +1,62 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import '@ionic/angular/css/palettes/dark.system.css';
+
+/* src/theme/global.scss */
+
+/* Fondo de la app con la imagen proporcionada */
+body {
+    background: url('https://img.freepik.com/vector-premium/fondo-abstracto-cine-casa-ilustracion_118124-3052.jpg');
+    background-size: cover;
+  }
+
+  /* Contenido de la app */
+  ion-content {
+    --background: rgba(0, 0, 0, 0.1); /* Fondo oscuro semitransparente para el contenido */
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  /* Otros estilos para botones, inputs, etc. */
+  ion-button {
+    --background: #b71c1c;
+    --color: #fff;
+    --border-radius: 20px;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }

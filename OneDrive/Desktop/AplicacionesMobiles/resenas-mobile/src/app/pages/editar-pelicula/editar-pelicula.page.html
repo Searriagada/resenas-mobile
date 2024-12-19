@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+  <ion-card class="card-container" *ngFor="let pelicula of peliculas; let i=index">
+    <div class="img-container">
+      <img class="imagen" alt="Imagen de la película" src="{{pelicula.imagenUrl}}" />
+    </div>
+    <div class="texto">
+      <ion-card-header class="header">
+        <ion-card-title>{{pelicula.titulo}}</ion-card-title>
+        <ion-card-subtitle>{{pelicula.director}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content class="sinopsis">
+        {{pelicula.sinopsis}}
+      </ion-card-content>
+      <div class="btn-container">
+        <ion-button fill="clear">Editar</ion-button>
+        <ion-button (click)="eliminarPelicula(i)" fill="clear">Eliminar</ion-button>
+      </div>
+    </div>
+
+
+  </ion-card>
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <!-- Header transparente -->
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Crear nueva cuenta</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <form>
+            <ion-input type="text" label="Nombre Usuario" label-placement="floating" fill="outline"
+              placeholder="Ingresa tu usuario"></ion-input>
+            <ion-input label="Correo electrónico" label-placement="floating" fill="outline"
+              placeholder="Ingresa tu correo"></ion-input>
+            <ion-input type="date" label="Fecha de Nacimiento" label-placement="floating" fill="outline"
+              placeholder="Selecciona una fecha"></ion-input>
+            <ion-input type="password" label="Contraseña" label-placement="floating" fill="outline"
+              placeholder="Crea una contraseña"></ion-input>
+            <ion-input type="password" label="Repite tu contraseña" label-placement="floating" fill="outline"
+              placeholder="Repite tu contraseña"></ion-input>
+            <ion-button (click)="cambiarPagina()" shape="round" expand="full" fill="outline" >Crear cuenta</ion-button>
+            <ion-button (click)="cambiarPagina()" shape="round" expand="full" fill="outline" color="danger">Cancelar</ion-button>
+          </form>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,102 @@
+<ion-content [fullscreen]="true" class="ion-padding ion-justify-content-center">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Agregar Pelicula</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <br>
+
+  <ion-card *ngIf="photo">
+    <ion-img [src]="photo"></ion-img>
+  </ion-card>
+
+  <ion-card *ngIf="location">
+    <ion-card-header>
+      <ion-card-title>Ubicación</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Latitud: {{location.latitude}}</p>
+      <p>Longitud: {{location.longitude}}</p>
+      <p>Dirección: {{address}}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <form #movieForm="ngForm" (ngSubmit)="onSubmit(movieForm)">
+            <!-- Titulo Película -->
+            <ion-input type="text" label="Titulo Pelicula" placeholder="Ingrese el título" [(ngModel)]="tituloPelicula"
+              name="tituloPelicula" required>
+            </ion-input>
+            <ion-text>
+              <small *ngIf="!tituloPelicula && tituloPelicula.length === 0" class="error-message">* El título de la
+                película es
+                obligatorio.</small>
+            </ion-text>
+
+            <!-- Año de lanzamiento -->
+            <ion-input type="date" label="Año de lanzamiento" placeholder="Ingrese el año"
+              [(ngModel)]="fechaLanzamiento" name="fechaLanzamiento" required>
+            </ion-input>
+            <ion-text>
+              <small *ngIf="!fechaLanzamiento && fechaLanzamiento.length === 0" class="error-message">El año de
+                lanzamiento es
+                obligatorio.</small>
+            </ion-text>
+
+            <!-- Director -->
+            <ion-input type="text" label="Director" placeholder="Ingrese el nombre del director" [(ngModel)]="director"
+              name="director" required>
+            </ion-input>
+            <ion-text>
+              <small *ngIf="!director && director.length === 0" class="error-message">El nombre del director es
+                obligatorio.</small>
+            </ion-text>
+
+            <!-- Género -->
+            <ion-input type="text" label="Género" placeholder="Ingrese el género" [(ngModel)]="genero" name="genero"
+              required>
+            </ion-input>
+            <ion-text>
+              <small *ngIf="!genero && genero.length === 0" class="error-message">El género es obligatorio.</small>
+            </ion-text>
+
+            <!-- Sinopsis -->
+            <ion-input type="text" label="Sinopsis" placeholder="Ingrese la sinopsis" [(ngModel)]="sinopsis"
+              name="sinopsis" required>
+            </ion-input>
+            <ion-text>
+              <small *ngIf="!sinopsis && sinopsis.length === 0" class="error-message">La sinopsis es
+                obligatoria.</small>
+            </ion-text>
+
+            <!-- Duración -->
+            <ion-input type="time" label="Duración (min)" placeholder="Ingrese la duración en minutos"
+              [(ngModel)]="duracion" name="duracion" required>
+            </ion-input>
+            <ion-text>
+              <small *ngIf="!duracion && duracion.length === 0" class="error-message">La duración es
+                obligatoria.</small>
+            </ion-text>
+
+
+            <!-- Botón para capturar foto y obtener ubicación -->
+            <ion-button expand="block" (click)="capturePhoto()">Tomar Foto y Obtener Ubicación</ion-button><br />
+
+            <!-- Botón de agregar -->
+            <ion-button (click)="cambiarPagina()" shape="round" expand="full" fill="outline"
+              [disabled]="movieForm.invalid">
+              Agregar
+            </ion-button>
+          </form>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+
+</ion-content>

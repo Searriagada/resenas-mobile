@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <!-- Header transparente -->
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ingresa tus datos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <form [formGroup]="form">
+            <ion-input type="email" formControlName="email" label="Correo" label-placement="floating" fill="outline" placeholder="Correo"></ion-input>
+            <ion-text color="danger" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+              <small *ngIf="form.get('email')?.hasError('required')">* El correo es obligatorio</small>
+              <small *ngIf="form.get('email')?.hasError('email')">* Formato de correo inválido</small>
+            </ion-text>
+            <ion-input type="password" formControlName="password" label-placement="floating" fill="outline" type="password" label="Password">
+              <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+            </ion-input>
+            <ion-text color="danger" *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+              <small *ngIf="form.get('password')?.hasError('required')">* La contraseña es obligatoria</small>
+              <small *ngIf="form.get('password')?.hasError('minlength')">* La contraseña debe tener al menos 8
+                caracteres</small>
+            </ion-text>
+            <ion-button (click)="cambiarPagina()" shape="round" expand="full" fill="outline" >Iniciar sesión</ion-button>
+            <ion-button (click)="registro()" shape="round" expand="full" fill="outline" color="danger">Registrarse</ion-button>
+            <ion-toggle [checked]="true" justify="end">Recordar usuario</ion-toggle><br /><br />
+
+          </form>
+        </ion-col>
+      </ion-row>
+    </ion-card-content> 
+  </ion-card>
+</ion-content>
