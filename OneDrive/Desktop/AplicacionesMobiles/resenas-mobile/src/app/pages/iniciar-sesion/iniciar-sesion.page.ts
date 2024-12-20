@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import {IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle,
+import {
+  IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle,
   IonCardSubtitle, IonCardContent, IonInput, IonButton, IonToggle, IonInputPasswordToggle,
-  IonRow, IonCol, IonText} from '@ionic/angular/standalone'; // Importa componentes de Ionic para el diseño de la interfaz
+  IonRow, IonCol, IonText
+} from '@ionic/angular/standalone'; // Importa componentes de Ionic para el diseño de la interfaz
 import { Router } from '@angular/router';
 
 @Component({
@@ -47,4 +49,7 @@ export class IniciarSesionPage implements OnInit {
     this.router.navigate(['/agregar-usuario']);
   }
 
+
+
 }
+
