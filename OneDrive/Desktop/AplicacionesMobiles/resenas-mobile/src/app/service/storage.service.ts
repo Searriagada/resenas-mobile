@@ -9,6 +9,7 @@ export class StorageService {
   private _storage: Storage | null = null;
 
   constructor(private storage: Storage) {
+    this.init();
 
   }
   async init() {
@@ -25,8 +26,9 @@ export class StorageService {
     return await this._storage?.get(key);
   }
 
-  public async registerUser(email: string,password: string, firstName: string, lastName: string) {
-    const user = {email, password, firstName, lastName};
+  public async registerUser(email: string,password: string, firstName: string, birthday: string) {
+    const user = {email, password, firstName, birthday};
+    console.log(user);
     await this.set(email, user);
   }
   
